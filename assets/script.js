@@ -101,14 +101,19 @@ var hasUpperLetters=upperLetters
 var charcount= {from: 8,to: 128};
 
 var generateBtn = document.querySelector("#generate");
-
+function start() {
+  upon click "btn"  prompt()
+}
 function prompt() {
-  charcount = prompt("How many characters would you like in your password?");
+  charcount=window.prompt("How many characters would you like in your password?");
   hasSpChars = confirm("Confirm your password has special characters");
   hasNumbers = confirm("Confirm your password has numbers");
   hasLowerLetters = confirm("Confirm your password has lower case letters");
   hasUpperLetters = confirm("Confirm your password has upper case letters");
   return;
+}
+function start() {
+    prompt();
 }
 
 // function writePassword() {
