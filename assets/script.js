@@ -101,20 +101,46 @@ var hasUpperLetters=upperLetters
 var charcount= {from: 8,to: 128};
 
 var generateBtn = document.querySelector("#generate");
+
 function start() {
   upon click "btn"  prompt()
 }
+
 function prompt() {
   charcount=window.prompt("How many characters would you like in your password?");
   hasSpChars = confirm("Confirm your password has special characters");
   hasNumbers = confirm("Confirm your password has numbers");
   hasLowerLetters = confirm("Confirm your password has lower case letters");
   hasUpperLetters = confirm("Confirm your password has upper case letters");
-  return;
+  generatepassword();
 }
+
 function start() {
     prompt();
 }
+
+function generatepassword(){
+  charcount < 8 && charcount > 128;
+  if (charcount < 8) {
+    alert("Password must contain at least 8 characters");
+  } else if (charcount > 128) {
+    alert("Password is too long");
+  } else if (charcount === NaN) {
+    alert("Value is not a Number");
+  } else if (charcount > 7 || charcount < 129_) {
+    generaterandom()
+  } }   
+  
+  function generaterandom() {
+    Math.floor.random(*) charcount
+  }
+
+  /make sure length is in range
+  // for (let index = 0; index < possibilities.pwlength; index++)
+  // password +- possibilities[randomIndex];
+  
+  // Math.floor.random()*length
+  
 
 // function writePassword() {
 //   let password = generatepassword();
@@ -131,13 +157,6 @@ function start() {
 //   generateBtn.addEventListener("click", writePassword);
 //   window.prompt("How many characters do you want your password to be?");
 // }
-// length < 8 && length > 128;
-// if (length < 8) {
-//   alert("Password must contain at least 8 characters");
-// } else if (length > 128) {
-//   alert("Password is too long");
-// } else if (length === NaN) {
-//   alert("Value is not a Number");
 
 //   const hasSpecialChars = confirm("Do you want to include Sp characters");
 //   const hasNumbers = confirm("Do you want to includenumbers");
